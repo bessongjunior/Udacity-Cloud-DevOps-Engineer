@@ -34,12 +34,16 @@ There are two parts in this project;
 Amazon aws account and a bucket already deployed having the web app code . Don't forget to adapt the userData to match your webapp sources location
 
 ### Architecture
-
+-------------------
 ![Udagram Architecture](UdacityCloudDevOpsEngineerProject2.png)
 
 ### Running it ?
 -------------------
   you can run the part as followed :
+  
+```
+aws --version
+```
   
 ```
 cd udacity_project_2
@@ -48,10 +52,10 @@ cd udacity_project_2
 
 ```
 cd udacity_project_2
-./create.sh Udagram-Server servers.yml server-params.json 
+./create.sh Udagram-Server server.yml server-params.json 
 ```
 
 ### Try it?
 -------------------
-Click this link ![now](http://udagr-webap-1c8t95amta2se-894713736.us-east-1.elb.amazonaws.com/) or
-This link:: http://udagr-webap-1c8t95amta2se-894713736.us-east-1.elb.amazonaws.com/
+Click this link [now](http://udagr-webap-le8cl9ut6hhy-1250437098.us-east-1.elb.amazonaws.com/) or
+This link:: http://udagr-webap-le8cl9ut6hhy-1250437098.us-east-1.elb.amazonaws.com/
