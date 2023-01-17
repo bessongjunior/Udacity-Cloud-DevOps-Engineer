@@ -108,9 +108,15 @@ Resources:
                     apt-get install unzip awscli -y
                     apt-get install apache2 -y
                     systemctl start apache2.service
-                    cd /var/www/html/
-                    aws s3 cp s3://udagram-webapp/index.html ./
+                    cd /var/www/html
+                    sudo rm index.html
+                    sudo aws s3 cp s3://udagram-webapp/index.html .
+                    sudo unzip -o udacity.zip
                     systemctl start apache2.service
+                    
+# cd /var/www/html/
+# aws s3 cp s3://udagram-webapp/index.html ./
+# systemctl start apache2.service
 # mv /var/www/html/index.html /var/www/html/index_old.html
 # wget -P /var/www/html/ https://udagram-webapp.s3.amazonaws.com/index.html
 
