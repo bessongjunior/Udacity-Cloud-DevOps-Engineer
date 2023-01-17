@@ -2,6 +2,7 @@ Description: >
     This template deploys network infrastructure needed for Udagram web application.
     Udacity Cloud Devops Engineer project 2 
     Junior Bessong / Jan 2022
+    
 Parameters:
     EnvironmentName:
         Description: This name will be prefixed to all the resources.
@@ -111,14 +112,7 @@ Resources:
                     cd /var/www/html
                     sudo rm index.html
                     sudo aws s3 cp s3://udagram-webapp/index.html .
-                    sudo unzip -o udacity.zip
                     systemctl start apache2.service
-                    
-# cd /var/www/html/
-# aws s3 cp s3://udagram-webapp/index.html ./
-# systemctl start apache2.service
-# mv /var/www/html/index.html /var/www/html/index_old.html
-# wget -P /var/www/html/ https://udagram-webapp.s3.amazonaws.com/index.html
 
             ImageId: !Ref ServerAMIId
             IamInstanceProfile: !Ref S3BucketsInstanceProfile
